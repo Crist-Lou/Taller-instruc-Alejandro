@@ -7,4 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class areas extends Model
 {
     protected $table = 'areas';
+
+    public function AC(){
+        return $this-> hasMany('app\Models\Course');
+    }
+    public function AT(){
+        return $this-> hasMany('app\Models\teacher');
+    }
 }
